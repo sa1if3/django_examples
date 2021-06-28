@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <title>
+            Techflow360 | Django Examples
+        </title>
+        <style>
+            #examples {
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            #examples td, #examples th {
+              border: 1px solid #ddd;
+              padding: 8px;
+            }
+            
+            #examples tr:nth-child(even){background-color: #f2f2f2;}
+            
+            #examples tr:hover {background-color: #ddd;}
+            
+            #examples th {
+              padding-top: 12px;
+              padding-bottom: 12px;
+              text-align: left;
+              background-color: #04AA6D;
+              color: white;
+            }
+            </style>
+    </head>
+ 
+    <body>
+        <h1>Click on each link to navigate to the example and tutorial.</h1>
+        <table id="examples">
+            <tr>
+              <th>#</th>
+              <th>Tutorial</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><a href="https://techflow360.com/easy-step-by-step-django-form-validation-tutorial-with-regex/" target="_blank">https://techflow360.com/easy-step-by-step-django-form-validation-tutorial-with-regex/</a></td>
+              <td><a href="{% url 'add_new_company' %}">Add New Company</a></td>
+            </tr>
+          </table>
+    </body>
+</html>

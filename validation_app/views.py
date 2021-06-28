@@ -17,3 +17,6 @@ def add_new_company(request):
     else:
         form = CompanyForm()
     return render(request, 'validation_app/company/add.html', {'form': form})
+
+def index(request):
+    return render(request,'validation_app/index.html')
