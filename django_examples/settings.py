@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6*^=5-$ul(a_mmch^r*h@(hredtd=d5vlc6vj#@l5&=k_^o+@(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangoexamples.com']
+ALLOWED_HOSTS = ['djangoexamples.com','192.168.1.40','localhost','127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'validation_app',
+    'channels',
     'chat',
 ]
 
@@ -70,7 +71,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_examples.wsgi.application'
-
+# Channels
+ASGI_APPLICATION = 'django_examples.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
